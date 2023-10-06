@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep z Przyczepami</title>
+    <style>
+        /* Resetowanie domyślnych stylów przeglądarki */
+        body, h1, h2, h3, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        /* Ogólny styl dla strony */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Nagłówek */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        header nav ul {
+            margin-top: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Sekcja Oferty */
+        #offer {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            max-width: 100%;
+        }
+
+        .product h3 {
+            margin-top: 10px;
+        }
+
+        .product a {
+            display: block;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 10px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Sekcja Kontakt */
+        #contact {
+            background-color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        address {
+            font-style: normal;
+        }
+
+        /* Stopka */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Responsywność */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header nav ul li {
+                margin-right: 10px;
+            }
+
+            .product {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .product a {
+                padding: 5px;
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sklep z Przyczepami</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Strona główna</a></li>
+                <li><a href="#">Oferta</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="offer">
+        <h2>Nasza oferta</h2>
+        <div class="product">
+            <img src="przyczepa1.jpg" alt="Przyczepa 1">
+            <h3>Przyczepa Model 1</h3>
+            <p>Opis przyczepy model 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Cena: 10 000 PLN</p>
+        </div>
+        <div class="product">
+            <img src="przyczepa2.jpg" alt="Przyczepa 2">
+            <h3>Przyczepa Model 2</h3>
+            <p>Opis przyczepy model 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Cena: 12 000 PLN</p>
+        </div>
+        <!-- Dodaj więcej produktów tutaj -->
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Masz pytania? Skontaktuj się z nami:</p>
+        <address>
+            Adres: ul. Przykładowa 123, 00-000 Warszawa
+            Telefon: +48 123 456 789
+            Email: kontakt@sklep-przyczepy.pl
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Sklep z Przyczepami</p>
+    </footer>
+</body>
+</html>
